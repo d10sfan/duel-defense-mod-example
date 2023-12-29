@@ -1,0 +1,53 @@
+{
+	"TestMap": {
+		"scene_name": "TestMap",
+		"friendly_name": "Test Map",
+		"starting_money": 1500,
+		"waves": [
+			{
+				"enemies": [
+					{"base": "Tank", "category": "EnergyTank", "delay": 1.5},
+					{"base": "Tank", "category": "LongTank", "delay": 1.5},
+					{"base": "Tank", "category": "EnergyTank", "delay": 1.5},
+					{"base": "Tank", "category": "LongTank", "delay": 1.5},
+					{"base": "Tank", "category": "EnergyTank", "delay": 1.5},
+					{"base": "Tank", "category": "LongTank", "delay": 1.5}
+				],
+				"cost": 300
+			},
+			{
+				"enemies": [
+					{"base": "Tank", "category": "EnergyTank", "delay": 1.5},
+					{"base": "Tank", "category": "LongTank", "delay": 1.5},
+					{"base": "Tank", "category": "EnergyTank", "delay": 1.5},
+					{"base": "Tank", "category": "LongTank", "delay": 1.5},
+					{"base": "Tank", "category": "EnergyTank", "delay": 1.5},
+					{"base": "Tank", "category": "LongTank", "delay": 1.5}
+				],
+				"cost": 300
+			},
+			{
+				"enemies": [
+					{"base": "Tank", "category": "EnergyTank", "delay": 1.5},
+					{"base": "Tank", "category": "LongTank", "delay": 1.5},
+					{"base": "Tank", "category": "EnergyTank", "delay": 1.5},
+					{"base": "Tank", "category": "LongTank", "delay": 1.5},
+					{"base": "Tank", "category": "EnergyTank", "delay": 1.5},
+					{"base": "Tank", "category": "LongTank", "delay": 1.5}
+				],
+				"cost": 300
+			},
+			{
+				"enemies": [
+					{"base": "Tank", "category": "EnergyTank", "delay": 1.5},
+					{"base": "Tank", "category": "LongTank", "delay": 1.5},
+					{"base": "Tank", "category": "EnergyTank", "delay": 1.5},
+					{"base": "Tank", "category": "LongTank", "delay": 1.5},
+					{"base": "Tank", "category": "EnergyTank", "delay": 1.5},
+					{"base": "Tank", "category": "LongTank", "delay": 1.5}
+				],
+				"cost": 300
+			}
+		]
+	}
+}
