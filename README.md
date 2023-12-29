@@ -14,6 +14,7 @@ First, after the Godot project has been created, go into Display/Window and set 
 
 Next, create a folder structure like the following.
 
+```
 |-- project.godot
 |-- mod-example
     |-- Assets
@@ -23,6 +24,7 @@ Next, create a folder structure like the following.
     |   |   |-- metadata.json
     |-- Scenes
         |-- Maps
+```
 
 The mod-example folder name should be replaced by your mod name, such as mod-space. Then create empty maps.json and metadata.json files in the folders shown.
 
