@@ -81,6 +81,8 @@ To try it in the game, export the project as a .pck file, then copy it to the mo
 
 ### Releasing the Mod
 
-Once the mod has been tested, the .pck file can be shared.
+Once the mod has been tested, the .pck file can be shared. Mods can be manually installed and mod.io is integrated with the game, so that mods can be downloaded in-game.
 
-[TODO] Mod site or mod.io?
+Mods cannot be uploaded in-game, but can be uploaded using the web, at https://mod.io/g/duel-defense1. Once a mod has been released, it will then show up in the mods list.
+
+![Mods UI](docs/mods_ui.png)
