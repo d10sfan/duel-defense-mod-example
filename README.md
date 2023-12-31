@@ -93,7 +93,7 @@ To create a turret, first create a scene file in Scenes/Turrets, creating the di
 * Impact is a Marker2D, used to show an impact for maps where the turrets can be hit.
 * Sonar can be an empty Node2D.
 
-As well, create a gdscript and attach it to the root node. This should just contain:
+As well, create a gdscript and attach it to the root node. This should just contain the following. Further extension of the scripting portion is possible, and this could be done by overriding functions in this, or creating a custom class, that follows similar behavior.
 
 ```
 extends Turrets
@@ -120,6 +120,10 @@ Once this is complete, create a tower_data.json file in Assets/Configs, if it do
 ```
 
 Once all this is done, the mod can be exported and if a new game is started, the new turret should show in the build menu.
+
+### Creating an Enemy
+
+[TODO] Show creating an enemy entity
 
 ### Modifying Existing Game Assets
 
