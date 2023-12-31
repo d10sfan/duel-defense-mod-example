@@ -1,0 +1,15 @@
+{
+	"GunTestGun": {
+		"damage": 30,
+		"rof": 0.2,
+		"range": 400,
+		"category": "Projectile",
+		"cost": 150,
+		"build_anywhere": false,
+		"upgrades": ["ActionSell", "ActionRepair"],
+		"sound": true,
+		"in_build_menu": true,
+		"scene_name": "TestTurret",
+		"hp": 200
+	}
+}

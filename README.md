@@ -26,7 +26,7 @@ Next, create a folder structure like the following.
         |-- Maps
 ```
 
-The mod-example folder name should be replaced by your mod name, such as mod-space. Then create empty maps.json and metadata.json files in the folders shown.
+The mod-example folder name should be replaced by your mod name, such as mod-space. Then create empty maps.json and metadata.json files in the folders shown. Make sure that the exported .pck file matches the name given here, so that if the mod is called mod-example, then the pck should be mod-example.pck.
 
 #### Metadata JSON
 
@@ -73,7 +73,53 @@ To try it in the game, export the project as a .pck file, then copy it to the mo
 
 ### Creating a Turret
 
-[TODO] Describe and show example of new turret
+To create a turret, first create a scene file in Scenes/Turrets, creating the directory if it does not already exist. The nodes should end up looking like the following. Any custom assets can be put in the project as well. Abilities could also be created in a similar manner.
+
+![Nodes List](docs/turret_nodes_list.png)
+
+* CharacterBody2D should contain a CollisionShape2D.
+* Base is a Sprite2D, with the sprite of the turret base.
+* Base/HealthBar is a ProgressBar or TextureProgressBar, with 0 to 100 and a step of 1. This should go above the turret and should be defaulted to invisible. This is used to show an impact for maps where the turrets can be hit.
+* Turret is a Sprite2D or AnimatedSprite2D.
+    * Make sure that the Sprite is facing to the right.
+    * Make sure that if the turret is a Sprite2D to provide an AnimationPlayer node, otherwise the AnimatedSprite2D will be played.
+    * The AnimationPLayer would be used to show a muzzle flash or move the turret back for example. It should contain an animation with the name "Fire".
+* Range is a Area2D with a CollisionShape2D, this is a Circle2D that will be filled in with the range using the metadata.
+    * Make sure to connect body_entered with _on_Range_body_entered, and body_exited with _on_Range_body_exited.
+    * Once you have connected them, delete the default method in the gdscript, so that the Turrets gdscript can handle it.
+* ClickableArea is a Rectangle2D colision that covers the visual area of the turret, so that it can be clicked on in gameplay.
+    * Make sure to connect input_event with _on_ClickableArea_input_event on the ClickableEvent node.
+    * Once you have connected them, delete the default method in the gdscript, so that the Turrets gdscript can handle it.
+* Impact is a Marker2D, used to show an impact for maps where the turrets can be hit.
+* Sonar can be an empty Node2D.
+
+As well, create a gdscript and attach it to the root node. This should just contain:
+
+```
+extends Turrets
+```
+
+Once this is complete, create a tower_data.json file in Assets/Configs, if it does not already exist. Then create a tower data object, that looks something like the following:
+
+```json
+{
+	"GunTestGun": {
+		"damage": 30,
+		"rof": 0.2,
+		"range": 400,
+		"category": "Projectile",
+		"cost": 150,
+		"build_anywhere": false,
+		"upgrades": ["ActionSell", "ActionRepair"],
+		"sound": true,
+		"in_build_menu": true,
+		"scene_name": "TestTurret",
+		"hp": 200
+	}
+}
+```
+
+Once all this is done, the mod can be exported and if a new game is started, the new turret should show in the build menu.
 
 ### Modifying Existing Game Assets
 
