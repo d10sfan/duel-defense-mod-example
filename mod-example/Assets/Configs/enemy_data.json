@@ -1,0 +1,9 @@
+{
+	"TestTank": {
+		"speed": 110,
+		"hp": 200,
+		"damage": 21,
+		"cost": 100,
+		"move_sound": "average"
+	}
+}

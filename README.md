@@ -28,6 +28,8 @@ Next, create a folder structure like the following.
 
 The mod-example folder name should be replaced by your mod name, such as mod-space. Then create empty maps.json and metadata.json files in the folders shown. Make sure that the exported .pck file matches the name given here, so that if the mod is called mod-example, then the pck should be mod-example.pck.
 
+The top-level Assets folder that the game has should not be created, unless you are planning on modifying existing assets.
+
 #### Metadata JSON
 
 metadata.json describes the mod, giving a friendly name and an author. An example of this is below:
@@ -123,11 +125,39 @@ Once all this is done, the mod can be exported and if a new game is started, the
 
 ### Creating an Enemy
 
-[TODO] Show creating an enemy entity
+To create an enemy, first create a scene file in Scenes/Enemies, creating the directory if it does not already exist. The nodes should end up looking like the following. Any custom assets can be put in the project as well.
 
-### Modifying Existing Game Assets
+![Nodes List](docs/enemy_nodes_list.png)
 
-[TODO] Describe and show example of modifying existing game assets, such as a turret sprite
+* The root is a PathFollow2D
+* CharacterBody2D/CollisionShape2D is a rectangle covering the sprite of the enemy.
+* CharacterBody2D/ImpactEffects is an empty Node2D
+* Sprite2D is the sprite of the enemy.
+* Sprite2D/HealthBar is a progress bar.
+* Impact is a Marker2D.
+
+As well, create a gdscript and attach it to the root node. This should just contain the following. Further extension of the scripting portion is possible, and this could be done by overriding functions in this, or creating a custom class, that follows similar behavior.
+
+```
+extends Tank
+```
+
+Once this is complete, create a enemy_data.json file in Assets/Configs, if it does not already exist. Then create a enemy data object, that looks something like the following:
+
+```json
+{
+	"TestTank": {
+		"speed": 110,
+		"hp": 200,
+		"damage": 21,
+		"cost": 100,
+		"move_sound": "average"
+	}
+}
+
+```
+
+Next, go into the maps.json and create a enemy in a wave with the base key set to the scene name (without the .tscn), and the category the key you created above.
 
 ### Releasing the Mod
 

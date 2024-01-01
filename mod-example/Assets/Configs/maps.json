@@ -6,12 +6,12 @@
 		"waves": [
 			{
 				"enemies": [
-					{"base": "Tank", "category": "EnergyTank", "delay": 1.5},
-					{"base": "Tank", "category": "LongTank", "delay": 1.5},
-					{"base": "Tank", "category": "EnergyTank", "delay": 1.5},
-					{"base": "Tank", "category": "LongTank", "delay": 1.5},
-					{"base": "Tank", "category": "EnergyTank", "delay": 1.5},
-					{"base": "Tank", "category": "LongTank", "delay": 1.5}
+					{"base": "TestEnemy", "category": "TestTank", "delay": 1.5},
+					{"base": "TestEnemy", "category": "TestTank", "delay": 1.5},
+					{"base": "TestEnemy", "category": "TestTank", "delay": 1.5},
+					{"base": "TestEnemy", "category": "TestTank", "delay": 1.5},
+					{"base": "TestEnemy", "category": "TestTank", "delay": 1.5},
+					{"base": "TestEnemy", "category": "TestTank", "delay": 1.5}
 				],
 				"cost": 300
 			},
